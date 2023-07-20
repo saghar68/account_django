@@ -1,0 +1,29 @@
+{% extends "_base.html" %}
+{% block title %}Login{% endblock title %}
+
+{% block context %}
+
+<br>
+<div class='container'>
+    <h1>Login form:</h1>
+    <br>
+    <form method='POST'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">send</button>
+    </form>
+    <br>
+    <a href={% url 'password_reset' %}>Do you forget your password? </a>  |  <a href={% url 'signup' %}>signup</a>
+    
+    
+
+</div>
+
+{% endblock context %}
+{% block footer %}
+{% include 'footer.html' %}
+{% endblock footer %}
+
+
+
+

@@ -1,0 +1,28 @@
+{% extends "_base.html" %}
+{% block title %}signup{% endblock title %}
+
+{% block context %}
+
+<br>
+<div class='container'>
+    <h1>signup form:</h1>
+    <br>
+    <form method='POST'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">send</button><br>
+    </form>
+</div>
+
+
+
+
+{% endblock context %}
+
+{% block footer %}
+{% include 'footer.html' %}
+{% endblock footer %}
+
+
+
+
